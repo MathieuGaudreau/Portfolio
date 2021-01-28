@@ -1,0 +1,92 @@
+.nomProjetPop{
+    @include nomProjet();
+    align-self: flex-start;
+    font-size: 3em;
+    margin: 0;
+}
+
+.descriptionProjet{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.popup{
+    display: none;
+    @include ecranCategorie();
+    position: fixed;
+    top: 5em;
+    left: 15em;
+    width: 75%;
+    height: 47em;
+    z-index: 1000;
+    flex-flow: row-reverse;
+}
+
+.popJeux{
+    background: couleurRect(jeux);
+}
+
+.popWeb{
+    background: couleurRect(design);
+}
+
+.popPhoto{
+    background: couleurRect(photoshop);
+}
+
+
+#date{
+    font-size:2em;
+    margin: 0;
+}
+
+.txtDescription{
+    font-family: $fontDesc;
+    font-size: 1.5em;
+    text-align: justify;
+    width: 75%;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.boutonPop{
+    margin-top: 0.5em;
+}
+
+.lienProjet{
+    font-family: $font;
+    color: $couleur-nom;
+    font-size: 2em;
+    text-decoration: none;
+    transition: 0.5s color linear;
+}
+
+.lienProjet:hover{
+    color: $couleur_fond;
+}
+
+.lienProjet:hover i{
+    transition: 0.5s color linear;
+}
+
+.lienProjet i{
+    font-size: 1em;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.blanc{
+    color: $couleur-nom;
+}
+
+.liens{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}

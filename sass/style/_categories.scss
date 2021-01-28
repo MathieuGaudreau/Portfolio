@@ -1,0 +1,133 @@
+@import "./variables";
+
+.ecranCategorie{
+    position: fixed;
+    top: 5em;
+    left: 15em;
+    width: 75%;
+    height: 47em;
+    border-radius: 10px;
+    justify-content: space-between;
+    flex-flow: column;
+}
+
+.ecranCategorie i{
+    height: fit-content;
+    margin-right: 0.5em;
+    font-size: 3rem;
+    color: $couleur_nom;
+    transition: 0.5s color linear;
+}
+
+.ecranCategorie i:hover{
+    color: $couleur_fond;
+    cursor: pointer;
+
+}
+
+
+.ecranCategorie i:active{
+    color: $couleur-nom;
+}
+
+.ecranCat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15%;
+}
+
+.nomCat{
+    margin-top: 0;
+    font-size: 3rem;
+    margin-left: 0.5em;
+    height: fit-content;
+}
+
+#ecranWeb{
+    background: couleurRect(design);
+    @include ecranCategorie();
+}
+
+#ecranJeux{
+    background: couleurRect(jeux);
+    @include ecranCategorie();
+}
+
+#ecranPhotoshop{
+    background: couleurRect(photoshop);
+    @include ecranCategorie();
+}
+
+#ecranIllustrator{
+    background: couleurRect(illustrator);
+    @include ecranCategorie();
+}
+
+.projet{
+    align-self: center;
+    width: 20rem;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    z-index: 1000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s filter linear;
+    box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
+    box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
+}
+
+.projet:hover{
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.projet:hover > .nomProjet{
+    color: $couleur_fond;
+}
+
+.nomProjet{
+    @include nomProjet();
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 100%;
+    transform: translateY(3em);
+    transition: 0.5s color linear;
+}
+
+
+@keyframes popupOpen {
+    0%{
+      transform: scale(0.0);
+    }
+
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes popupClose {
+    0%{
+      transform: scale(1);
+    }
+
+    100%{
+      transform: scale(0.0);
+    }
+  }
+
+  .listeProjet{
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      height: 100%;
+      justify-content: space-evenly;
+      align-content: space-evenly;
+  }
+
+  
+
+  

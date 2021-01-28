@@ -1,0 +1,135 @@
+@import "./variables";
+
+body{
+   background:$couleur_fond;
+}
+
+
+
+#nom{
+    display: flex;
+    width: min-content;
+    flex-flow: column;
+}
+
+#icons{
+    width: fit-content;
+    display: flex;
+    font-size: 0.5em;
+}
+
+#icons a{
+    margin: 0;
+}
+
+#cv{
+    font-family: $font;
+    text-decoration: none;
+    @include icons();
+}
+
+
+.icon{
+@include icons();
+}
+
+h1{
+    font: 100% $font;
+    color: $couleur_nom;
+    font-weight: weight(regular);
+    font-size: 8em;
+    width: fit-content;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    width: fit-content;
+}
+
+#primary{
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    height: 100%;
+    @include mobile{
+        flex-flow: column;
+    }
+}
+
+#rectangles{
+    justify-self: center;
+    width: fit-content;
+    display: grid;
+    grid-template-areas: "photo jeux"
+                         "design illus" ;
+}
+
+
+#web{
+    margin-top: 2em;
+    width: 17em;
+    height: 12em;
+    grid-area: design;
+    background: couleurRect(design);
+    @include categories();
+    margin-right: 1em;
+}
+
+#photoshop{
+    width: 12em;
+    height: 17em;
+    grid-area: photo;
+    background: couleurRect(photoshop);
+    @include categories();
+    justify-self: right;
+    margin-right: 1em;
+}
+
+#jeux{
+    width: 17em;
+    height: 12em;
+    grid-area: jeux;
+    background: couleurRect(jeux);
+    @include categories();
+    margin-left: 1em;
+}
+
+#illustrator{
+    width: 12em;
+    height: 17em;
+    grid-area: illus;
+    background: couleurRect(illustrator);
+    @include categories();
+    margin-left: 1em;
+    position: relative;
+    bottom: 3em;
+}
+
+#presentation{
+    color: $couleur-nom;
+    font-family: $fontDesc;
+    width: 75%;
+}
+
+footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+footer h4{
+    color: $couleur-nom;
+    font-family: $font;
+    font-weight: weight(extraLight);
+    margin-top: 0.7em;
+    margin-bottom: 0;
+}
+
+header{
+    display: flex;
+    flex-flow: row;
+}
+
+
