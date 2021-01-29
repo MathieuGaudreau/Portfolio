@@ -713,6 +713,10 @@ img {
   transition: 0.5s color linear;
 }
 
+.lienProjet:hover > i {
+  color: #1b1e47;
+}
+
 .lienProjet i {
   font-size: 1em;
 }

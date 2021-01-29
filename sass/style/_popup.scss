@@ -72,6 +72,10 @@
     transition: 0.5s color linear;
 }
 
+.lienProjet:hover > i {
+    color: $couleur_fond;
+}
+
 .lienProjet i{
     font-size: 1em;
 }
