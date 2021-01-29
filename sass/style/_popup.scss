@@ -61,7 +61,7 @@
     color: $couleur-nom;
     font-size: 2em;
     text-decoration: none;
-    transition: 0.5s color linear;
+    transition: 0.2s color linear;
 }
 
 .lienProjet:hover{
@@ -69,7 +69,7 @@
 }
 
 .lienProjet:hover i{
-    transition: 0.5s color linear;
+    transition: 0.2s color linear;
 }
 
 .lienProjet:hover > i {
