@@ -172,4 +172,16 @@
       document.getElementById("listeProjetPhoto").style.display = "flex";
     });
 
+         //Rovesciato
+         document.getElementById('ROVE').addEventListener('mouseup',function () {
+          document.getElementById("popupROVE").style.display = "flex";
+          document.getElementById('listeProjetPhoto').style.display = "none";
+          document.getElementById('listePopPhoto').style.display = "flex";
+        });
+      
+        document.getElementById('boutonROVE').addEventListener('mouseup',function () {
+          document.getElementById('popupROVE').style.display = "none";
+          document.getElementById("listeProjetPhoto").style.display = "flex";
+        });
+
   })();
