@@ -160,4 +160,16 @@
       document.getElementById("listeProjetPhoto").style.display = "flex";
     });
 
+     //Objets
+     document.getElementById('OBJETS').addEventListener('mouseup',function () {
+      document.getElementById("popupOBJETS").style.display = "flex";
+      document.getElementById('listeProjetPhoto').style.display = "none";
+      document.getElementById('listePopPhoto').style.display = "flex";
+    });
+  
+    document.getElementById('boutonOBJETS').addEventListener('mouseup',function () {
+      document.getElementById('popupOBJETS').style.display = "none";
+      document.getElementById("listeProjetPhoto").style.display = "flex";
+    });
+
   })();
