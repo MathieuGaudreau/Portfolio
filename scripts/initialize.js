@@ -184,4 +184,30 @@
           document.getElementById("listeProjetPhoto").style.display = "flex";
         });
 
+    
+           //Bloodville
+           document.getElementById('BLOOD').addEventListener('mouseup',function () {
+            document.getElementById("popupBLOOD").style.display = "flex";
+            document.getElementById('listeProjetJeux').style.display = "none";
+            document.getElementById('listePopJeux').style.display = "flex";
+          });
+        
+          document.getElementById('boutonBLOOD').addEventListener('mouseup',function () {
+            document.getElementById('popupBLOOD').style.display = "none";
+            document.getElementById("listeProjetJeux").style.display = "flex";
+          }); 
+          
+               //Manor
+               document.getElementById('MANOR').addEventListener('mouseup',function () {
+                document.getElementById("popupMANOR").style.display = "flex";
+                document.getElementById('listeProjetJeux').style.display = "none";
+                document.getElementById('listePopJeux').style.display = "flex";
+              });
+            
+              document.getElementById('boutonMANOR').addEventListener('mouseup',function () {
+                document.getElementById('popupMANOR').style.display = "none";
+                document.getElementById("listeProjetJeux").style.display = "flex";
+              });      
+    
+
   })();

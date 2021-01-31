@@ -41,3 +41,15 @@
     background-size: contain;
     background-color: $couleur-anim;
 }
+
+#BLOOD{
+    background-image: url(/media/BLOOD/Gaudreau_Affiche.png);
+}
+
+#MANOR{
+    background-image: url(/media/MANOR/MenuIntro_AssemblageJeu.png);
+}
+
+.assasine{
+    transform: translateY(4em);
+}
