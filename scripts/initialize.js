@@ -209,5 +209,27 @@
                 document.getElementById("listeProjetJeux").style.display = "flex";
               });      
     
+         //Obelisque
+         document.getElementById('OBE').addEventListener('mouseup',function () {
+          document.getElementById("popupOBE").style.display = "flex";
+          document.getElementById('listeProjetPhoto').style.display = "none";
+          document.getElementById('listePopPhoto').style.display = "flex";
+        });
+      
+        document.getElementById('boutonOBE').addEventListener('mouseup',function () {
+          document.getElementById('popupOBE').style.display = "none";
+          document.getElementById("listeProjetPhoto").style.display = "flex";
+        });
 
+                 //Sous-Marin
+                 document.getElementById('SM').addEventListener('mouseup',function () {
+                  document.getElementById("popupSM").style.display = "flex";
+                  document.getElementById('listeProjetPhoto').style.display = "none";
+                  document.getElementById('listePopPhoto').style.display = "flex";
+                });
+              
+                document.getElementById('boutonSM').addEventListener('mouseup',function () {
+                  document.getElementById('popupSM').style.display = "none";
+                  document.getElementById("listeProjetPhoto").style.display = "flex";
+                });
   })();
