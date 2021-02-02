@@ -43,20 +43,6 @@
     font-size: 100px;
   }
 
-  .author-info {
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-  }
-  .author-info a {
-    color: white;
-  }
   img {
     object-fit: contain;
     position: absolute;
@@ -79,10 +65,17 @@
     position: relative;
     color: $couleur-nom;
     font-family: $font;
+    transition: .5s ease;
   }
   .slider > a:active {
     top: 1px;
+    background: $couleur-nom;
   }
   .slider > a:focus {
-    background: #000;
+    background: white;
+  }
+
+  .slider > a:hover{
+    background: $couleur_nom;
+    color: $couleur_fond;
   }
