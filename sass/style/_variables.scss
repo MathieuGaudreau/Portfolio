@@ -41,7 +41,6 @@ $couleurs-rect:(
 @mixin icons {
     font-size: 4em;
     color: couleurRect(jeux);
-    margin-left: 0.4em;
     transition: 0.3s color linear;
     &:hover{
         color: white;
