@@ -126,7 +126,7 @@ iframe{
       font-family: $font;
       color: $couleur_nom;
       font-size: 0.3em;
-      text-align: justify;
+      text-align: center;
       align-self: center;
       letter-spacing: 0.3em;
   }
@@ -136,6 +136,7 @@ iframe{
     font-family: $fontDesc;
     color: $couleur_nom;
     font-size: 0.2em;
-    text-align: justify;
+    text-align: center;
     align-self: center;
+    width: 80%;
 }
