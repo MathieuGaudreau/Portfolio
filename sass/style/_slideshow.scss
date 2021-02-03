@@ -3,40 +3,31 @@
     text-align: center;
     align-self: center;
     margin-left: 2em;
+    max-height: 50vh;
   }
   
   .slides {
     display: flex;
     border-radius: 10px;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    align-items: center;
+    height: 100%;
+  }
 
-  }
-  .slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  .slides::-webkit-scrollbar-thumb {
-    background: $couleur_fond;
-    border-radius: 10px;
-  }
-  .slides::-webkit-scrollbar-track {
-    background: transparent;
-  }
   .slides > div {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin-right: 50px;
     border-radius: 10px;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
-    background-color:rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +36,13 @@
 
   img {
     object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    max-height: 50vh;
+    border-radius: 10px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   
   .slider > a {
@@ -61,11 +54,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 2rem 0;
     position: relative;
     color: $couleur-nom;
     font-family: $font;
     transition: .5s ease;
+
   }
   .slider > a:active {
     top: 1px;
@@ -79,3 +73,57 @@
     background: $couleur_nom;
     color: $couleur_fond;
   }
+
+  .slideImg{
+    max-height: 65vh;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    opacity: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .container:hover .overlay {
+    height: 40%;
+    opacity: 1;
+  }
+
+  .txtHoverTitre{
+      font-family: $font;
+      color: $couleur_nom;
+      font-size: 0.3em;
+      text-align: center;
+      align-self: center;
+      letter-spacing: 0.3em;
+  }
+
+  .txtHoverDesc{
+     margin-top: 1em;
+    font-family: $fontDesc;
+    color: $couleur_nom;
+    font-size: 0.2em;
+    text-align: center;
+    align-self: center;
+    width: 80%;
+}

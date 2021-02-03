@@ -232,4 +232,16 @@
                   document.getElementById('popupSM').style.display = "none";
                   document.getElementById("listeProjetPhoto").style.display = "flex";
                 });
+
+    
+                //document.querySelectorAll(".slides img").addEventListener('mouseup', openlb);
+                document.getElementById("iViewer").addEventListener('mouseup', closelb);
+
+                const images = document.querySelectorAll(".slides img");
+
+                for (let i = 0; i < images.length; i++) {
+                    images[i].addEventListener("mouseup", function() {
+                      prendImg(this);
+                    });
+                }
   })();
