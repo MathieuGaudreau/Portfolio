@@ -3,7 +3,7 @@
     text-align: center;
     align-self: center;
     margin-left: 2em;
-    max-height: 50vh;
+    max-height: 60vh;
   }
   
   .slides {
@@ -15,6 +15,7 @@
     -webkit-overflow-scrolling: touch;
     align-items: center;
     height: 100%;
+    border-radius: 10px;
   }
 
   .slides > div {
@@ -34,11 +35,11 @@
     font-size: 100px;
   }
 
-  img {
+  .slides > div > img {
     object-fit: contain;
     width: 100%;
     height: 100%;
-    max-height: 50vh;
+    max-height: 60vh;
     border-radius: 10px;
     &:hover{
       cursor: pointer;
@@ -74,10 +75,6 @@
     color: $couleur_fond;
   }
 
-  .slideImg{
-    max-height: 65vh;
-  }
-
   .container {
     position: relative;
     width: 100%;
@@ -105,7 +102,7 @@
   }
 
   .container:hover .overlay {
-    height: 40%;
+    height: 45%;
     opacity: 1;
   }
 
@@ -119,11 +116,22 @@
   }
 
   .txtHoverDesc{
-     margin-top: 1em;
+    margin-top: 1em;
     font-family: $fontDesc;
     color: $couleur_nom;
     font-size: 0.2em;
     text-align: center;
     align-self: center;
     width: 80%;
+}
+
+.fullscreen{
+  margin-top: 1em;
+  font-family: $fontDesc;
+  color: couleurRect(jeux);
+  font-size: 0.15em;
+  text-align: center;
+  align-self: center;
+  width: 80%;
+  font-style: italic;
 }
