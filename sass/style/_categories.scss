@@ -64,6 +64,7 @@
     @include ecranCategorie();
 }
 
+
 .projet{
     align-self: center;
     width: 20rem;
@@ -86,8 +87,8 @@
 }
 
 .projetPetitCreation{
-    width: 13rem;
-    height: 60%;
+    width: 15rem;
+    height: 15rem;
 }
 
 .projet:hover{
@@ -139,8 +140,10 @@
   }
 
   #listeProjetPhoto{
-      width: 95%;
+      width: 80%;
       margin: 0 auto;
+        display: flex;
+        //justify-content: space-evenly;
   }
 
   

@@ -149,6 +149,13 @@
     document.getElementById('listePopPhoto').style.display = "flex";
     document.getElementById("popupSM").style.animation="popupOpen 0.2s"
   });
+
+  //Tempus Fugit
+  document.getElementById('TF').addEventListener('mouseup',function () {
+    document.getElementById("popupTF").style.display = "flex";
+    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById("popupTF").style.animation="popupOpen 0.2s"
+  });
               
   document.getElementById("iViewer").addEventListener('mouseup', closelb);
 

@@ -24,6 +24,7 @@
 
 #MCDO{
     background-image: url(/media/MCDO/MCDO.png);
+    background-position: left;
 }
 
 #TUTO{
@@ -41,7 +42,7 @@
 }
 
 #BLOOD{
-    background-image: url(/media/BLOOD/Gaudreau_Affiche.png);
+    background-image: url(/media/BLOOD/background.png);
 }
 
 #MANOR{
@@ -54,6 +55,11 @@
 
 #SM{
     background-image: url(/media/SM/Gaudreau_affiche.png);
+}
+
+#TF{
+    background-image: url(/media/TF/TempusFugi3.png);
+    background-position: top;
 }
 
 .assasine{
