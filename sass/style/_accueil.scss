@@ -5,12 +5,29 @@ body{
    overflow: hidden;
 }
 
-
+#boutonMobile{
+    align-self: flex-end;
+    display: none;
+    transition: transform 0.3s linear;
+    margin-right: 0.2em;
+    @include ipad{
+        display: block;
+    }
+    &:hover{
+     transform: rotate(-20deg);   
+     cursor: pointer;
+    }
+}
 
 #nom{
     display: flex;
     width: min-content;
     flex-flow: column;
+    justify-content: center;
+
+    @include ipad{
+        text-align: center;
+     }
 }
 
 #icons{
@@ -43,8 +60,12 @@ h1{
     width: fit-content;
     word-wrap: break-word;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin: 0;
     width: fit-content;
+    @include smallPC{
+        font-size: 5em;
+    }
+    transition: 0.2s transform linear;
 }
 
 #primary{
@@ -53,10 +74,11 @@ h1{
     display: flex;
     justify-content: space-evenly;
     margin-top: 10%;
-    height: 100%;
-    @include mobile{
+
+    @include ipad{
         flex-flow: column;
-    }
+        align-items: center;
+     }
 }
 
 #rectangles{
@@ -65,6 +87,12 @@ h1{
     display: grid;
     grid-template-areas: "photo jeux"
                          "design illus" ;
+    
+    @include smallPC{
+       transform: scale(0.8);
+    }
+
+    transition: 0.2s transform linear;
 }
 
 
@@ -111,7 +139,6 @@ h1{
 #presentation{
     color: $couleur-nom;
     font-family: $fontDesc;
-    width: 75%;
 }
 
 footer{
@@ -119,6 +146,10 @@ footer{
     flex-flow: column;
     align-items: center;
     margin-top: 5em;
+
+    @include ipad{
+        display: none;
+     }
 }
 
 footer h4{

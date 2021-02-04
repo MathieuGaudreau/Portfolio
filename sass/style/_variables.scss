@@ -9,8 +9,12 @@ $font-weights:(
     "medium":500,
     "bold":700
 );
+
+$widthAnimNorm:20;
+$widthAnimIpad:40;
 $couleur_nom : white;
-$mobile:800px;
+$smallPC:1300px;
+$ipad:1000px;
 $couleurs-rect:(
     "design" : #fe6560,
     "photoshop" : #005b96,
@@ -34,7 +38,6 @@ $couleurs-rect:(
         transform: scale(1.1);
         cursor: pointer;
     }
-
     transition: 0.2s transform linear;
 }
 
@@ -57,8 +60,20 @@ $couleurs-rect:(
     @return map-get($map: $font-weights, $key: $weight-name);
 }
 
-@mixin mobile {
-    @media(max-width:$mobile){
+@mixin smallPC {
+    @media(max-width:$smallPC){
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media(max-width:$ipad){
+        @content;
+    }
+}
+
+@mixin grandPC {
+    @media(min-width:$smallPC){
         @content;
     }
 }

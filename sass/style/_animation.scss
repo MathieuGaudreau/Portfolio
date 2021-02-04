@@ -22,12 +22,25 @@ $total: 10;
 	$scale:random(2) - .4;
 	
 	.svg:nth-child(#{$i}){
-		left:random(120) * 1% - 20;
+
+		@include grandPC{
+		left:random(120) * 1% - $widthAnimNorm;
 		animation: raise#{$i} 6 + random(15) +s linear infinite;
 		animation-delay:random(5) - 5 + s;
 		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
 		z-index: $i - 20;
 		filter: blur($i - 6 + px);
+		}
+
+		@include ipad{
+			left:random(120) * 1% - 40;
+		animation: raise#{$i} 6 + random(15) +s linear infinite;
+		animation-delay:random(5) - 5 + s;
+		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+		z-index: $i - 20;
+		filter: blur($i - 6 + px);
+		}
+		
 
 	  @keyframes raise#{$i} {
 		  to{

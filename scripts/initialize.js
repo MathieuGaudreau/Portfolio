@@ -218,5 +218,7 @@ function fermeCat()
   document.getElementById("primary").style.display = "flex";
   document.getElementById("footer").style.display = "flex";
 }  
+
+document.getElementById("boutonMobile").addEventListener("mouseup", openNav);
   
 })();

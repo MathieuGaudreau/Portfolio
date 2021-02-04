@@ -29,3 +29,15 @@ function openlb() {
         document.getElementById("iViewerimg").style.display = "block";
         document.getElementById("iViewerimg").setAttribute("src", imgSrc);
     }
+
+
+    function openNav() {
+        document.getElementById("navigationMobile").style.width = "30%";
+        document.getElementById("boutonMobile").style.transform = "rotate(-90deg)";
+      }
+      
+      /* Close/hide the sidenav */
+      function closeNav() {
+        document.getElementById("navigationMobile").style.width = "0";
+        document.getElementById("boutonMobile").style.transform = "rotate(0deg)";
+      }
