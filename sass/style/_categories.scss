@@ -14,6 +14,10 @@
         min-height : fit-content;
     }
 
+    @include ipad{
+        height: 80%;
+    }
+
 }
 
 .ecranCategorie i{
