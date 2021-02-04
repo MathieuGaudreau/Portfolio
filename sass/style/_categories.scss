@@ -1,14 +1,19 @@
 @import "./variables";
 
 .ecranCategorie{
-    position: fixed;
+    position: absolute;
     top: 10%;
-    left: 15em;
+    left: 13%;
     width: 75%;
     height: 47em;
     border-radius: 10px;
     justify-content: space-between;
     flex-flow: column;
+
+    @include smallPC{
+        min-height : fit-content;
+    }
+
 }
 
 .ecranCategorie i{
@@ -17,6 +22,7 @@
     font-size: 3rem;
     color: $couleur_nom;
     transition: 0.2s color linear;
+
 }
 
 .ecranCategorie i:hover{
@@ -35,6 +41,12 @@
     align-items: center;
     justify-content: space-between;
     height: 15%;
+    margin-top: 1em;
+
+    @include smallPC{
+       
+    }
+    
 }
 
 .nomCat{
@@ -42,6 +54,10 @@
     font-size: 3rem;
     margin-left: 0.5em;
     height: fit-content;
+
+    @include smallPC{
+        font-size: 2em;
+    }
 }
 
 #ecranWeb{
@@ -79,16 +95,25 @@
     box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
     -moz-box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
     box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
+
+    @include smallPC{
+        transform: scale(0.65);
+    }
 }
 
 .projetPetit{
     width: 15rem;
-    height: 60%;
+    height: 70%;
 }
 
 .projetPetitCreation{
     width: 15rem;
     height: 15rem;
+
+    @include smallPC{
+        transform: scale(0.65);
+        height: 70%;
+    }
 }
 
 .projet:hover{
@@ -137,13 +162,45 @@
       height: 100%;
       justify-content: space-evenly;
       align-content: space-evenly;
+
+      @include smallPC{
+          overflow-y: scroll;
+          align-content: baseline;
+          height: 80%;
+          margin-right: 2%;
+      }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+    &::-webkit-scrollbar-thumb {
+        background: $couleur_fond;
+        border-radius: 10px;
+      }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+      }
   }
+
+
 
   #listeProjetPhoto{
       width: 80%;
       margin: 0 auto;
         display: flex;
-        //justify-content: space-evenly;
+       
+    @include smallPC{
+        width: 98%;
+        margin: 0;
+        margin-right: 2%;
+    }
   }
 
   

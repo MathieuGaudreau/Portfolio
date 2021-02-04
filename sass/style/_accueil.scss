@@ -74,7 +74,7 @@ h1{
     display: flex;
     justify-content: space-evenly;
     margin-top: 10%;
-
+    transition: display 0.2s linear;
     @include ipad{
         flex-flow: column;
         align-items: center;

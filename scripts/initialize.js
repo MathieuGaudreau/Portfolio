@@ -209,14 +209,17 @@ function fermeCat()
 {
   for (let i = 0; i < ecranCategories.length; i++) 
   {
-    ecranCategories[i].style.animation="popupClose 0.3s"
+    ecranCategories[i].style.animation="popupClose 0.3s ease-out"
+    
     setTimeout(function() {
     ecranCategories[i].style.display = "none";
+    
     }, 300);
-  }
 
+  }
   document.getElementById("primary").style.display = "flex";
   document.getElementById("footer").style.display = "flex";
+  
 }  
 
 document.getElementById("boutonMobile").addEventListener("mouseup", openNav);

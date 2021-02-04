@@ -4,6 +4,10 @@
     font-size: 3em;
     margin: 0;
     letter-spacing: 0.15em;
+
+    @include ipad{
+        font-size: 2.5em;
+       }
 }
 
 .descriptionProjet{
@@ -19,11 +23,36 @@
     @include ecranCategorie();
     position: fixed;
     top: 10%;
-    left: 15em;
+    left: 13%;
     width: 75%;
-    height: 47em;
+    min-height: 47em;
     z-index: 1000;
     flex-flow: row-reverse;
+    overflow: hidden;
+    @include ipad{
+        flex-flow: column;
+        overflow-y: scroll;
+        height: 47em;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+          }
+    
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+          }
+    
+        &::-webkit-scrollbar-thumb {
+            background: $couleur_fond;
+            border-radius: 10px;
+          }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+          }
+    }
+
 }
 
 .popJeux{
@@ -51,10 +80,19 @@
     width: 75%;
     margin: 0;
     line-height: 1.5em;
+
+    @include ipad{
+        padding-top: 3em;
+        padding-bottom: 2em;
+      }
 }
 
 .boutonPop{
     margin-top: 0.5em;
+
+    @include ipad{
+        align-self: flex-end;
+    }
 }
 
 .lienProjet{
