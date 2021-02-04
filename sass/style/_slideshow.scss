@@ -20,6 +20,26 @@
     align-items: center;
     height: 100%;
     border-radius: 10px;
+
+    @include ipad{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: fit-content;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $couleur_fond;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      }
+  }
+  
   }
 
   .slides > div {
@@ -39,6 +59,7 @@
 
     @include ipad{
       margin: 0;
+      height: fit-content;
     }
   }
 
@@ -50,6 +71,10 @@
     border-radius: 10px;
     &:hover{
       cursor: pointer;
+    }
+
+    @include ipad{
+      height: fit-content;
     }
     
   }
@@ -68,6 +93,12 @@
     color: $couleur-nom;
     font-family: $font;
     transition: .5s ease;
+
+    @include ipad{
+      width: 1.5em;
+      height: 1.5em;
+      font-size: 2em;
+    }
 
   }
   .slider > a:active {

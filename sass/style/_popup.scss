@@ -32,7 +32,7 @@
     @include ipad{
         flex-flow: column;
         overflow-y: scroll;
-        height: 47em;
+        height: 80%;
 
         &::-webkit-scrollbar {
             width: 10px;
