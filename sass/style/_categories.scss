@@ -18,6 +18,13 @@
         height: 80%;
     }
 
+    @include phone{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
 }
 
 .ecranCategorie i{
@@ -46,11 +53,6 @@
     justify-content: space-between;
     height: 15%;
     margin-top: 1em;
-
-    @include smallPC{
-       
-    }
-    
 }
 
 .nomCat{
@@ -103,11 +105,22 @@
     @include smallPC{
         transform: scale(0.65);
     }
+
+    @include phone{
+        height: 50%;
+        width: 48%;
+    }
+   
 }
 
 .projetPetit{
     width: 15rem;
     height: 70%;
+
+    @include phone{
+        height: 40%;
+        width: 48%;
+    }
 }
 
 .projetPetitCreation{
@@ -117,6 +130,11 @@
     @include smallPC{
         transform: scale(0.65);
         height: 70%;
+    }
+
+    @include phone{
+        height: 40%;
+        width: 48%;
     }
 }
 

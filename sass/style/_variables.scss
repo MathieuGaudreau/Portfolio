@@ -15,6 +15,7 @@ $widthAnimIpad:40;
 $couleur_nom : white;
 $smallPC:1300px;
 $ipad:1000px;
+$phone:600px;
 $couleurs-rect:(
     "design" : #fe6560,
     "photoshop" : #005b96,
@@ -71,8 +72,8 @@ $couleurs-rect:(
     }
 }
 
-@mixin grandPC {
-    @media(min-width:$smallPC){
+@mixin phone {
+    @media(max-width:$phone){
         @content;
     }
 }

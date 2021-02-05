@@ -13,6 +13,9 @@ body{
     @include ipad{
         display: block;
     }
+    @include phone{
+        font-size: 3em;
+    }
     &:hover{
      transform: rotate(-20deg);   
      cursor: pointer;
@@ -27,7 +30,12 @@ body{
 
     @include ipad{
         text-align: center;
-     }
+    }
+
+    @include phone{
+        font-size: 0.8em;
+    }
+
 }
 
 #icons{
@@ -79,6 +87,10 @@ h1{
         flex-flow: column;
         align-items: center;
      }
+
+     @include phone{
+        margin-top: 0;
+     }
 }
 
 #rectangles{
@@ -91,6 +103,10 @@ h1{
     @include smallPC{
        transform: scale(0.8);
     }
+
+    @include phone{
+        transform: scale(0.6);
+     }
 
     transition: 0.2s transform linear;
 }

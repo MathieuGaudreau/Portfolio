@@ -218,7 +218,11 @@ function fermeCat()
 
   }
   document.getElementById("primary").style.display = "flex";
-  document.getElementById("footer").style.display = "flex";
+
+  if (screen.width > 1000) {
+    document.getElementById("footer").style.display = "flex";
+  }
+  
   
 }  
 
