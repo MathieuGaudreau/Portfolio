@@ -28,6 +28,10 @@
 
   .logo{
       font-size: 3em;
+
+      @include phone{
+        font-size: 2em;
+      }
   }
   
   /* When you mouse over the navigation links, change their color */

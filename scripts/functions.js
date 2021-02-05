@@ -32,7 +32,7 @@ function openlb() {
 
 
     function openNav() {
-        document.getElementById("navigationMobile").style.width = "30%";
+        document.getElementById("navigationMobile").style.width = "100%";
         document.getElementById("boutonMobile").style.transform = "rotate(-90deg)";
       }
       
