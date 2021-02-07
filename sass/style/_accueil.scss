@@ -92,6 +92,11 @@ h1{
      @include phone{
         margin-top: 2;
      }
+
+     @include  vertical{
+        flex-flow: column;
+        align-items: center;
+     }
 }
 
 #rectangles{
@@ -106,7 +111,8 @@ h1{
     }
 
     @include phone{
-        transform: scale(0.6);
+        transform: scale(0.6) translateY(-5em);
+        margin-bottom: 2em;
      }
 
     transition: 0.2s transform linear;
