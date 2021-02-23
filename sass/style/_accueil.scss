@@ -104,7 +104,7 @@ h1{
     width: fit-content;
     display: grid;
     grid-template-areas: "photo jeux"
-                         "design illus" ;
+                         "design projRe" ;
     
     @include smallPC{
        transform: scale(0.8);
@@ -148,11 +148,11 @@ h1{
     margin-left: 1em;
 }
 
-#illustrator{
+#projetRecherche{
     width: 12em;
     height: 17em;
-    grid-area: illus;
-    background: couleurRect(illustrator);
+    grid-area: projRe;
+    background: couleurRect(projetRecherche);
     @include categories();
     margin-left: 1em;
     position: relative;

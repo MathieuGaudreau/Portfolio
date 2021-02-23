@@ -21,11 +21,12 @@
     document.getElementById("ecranPhotoshop").style.animation="popupOpen 0.2s"
   });
 
-  // document.getElementById("illustrator").addEventListener('mouseup',function () {
-  //   document.getElementById("primary").style.display = "none";
-  //   document.getElementById("ecranIllustrator").style.display = "flex";
-  //   document.getElementById("ecranIllustrator").style.animation="popupOpen 0.2s"
-  // });
+   document.getElementById("projetRecherche").addEventListener('mouseup',function () {
+     document.getElementById("primary").style.display = "none";
+     document.getElementById("footer").style.display = "none";
+     document.getElementById("ecranProjetRecherche").style.display = "flex";
+     document.getElementById("ecranProjetRecherche").style.animation="popupOpen 0.2s"
+   });
 
   document.getElementById("jeux").addEventListener('mouseup',function () {
     document.getElementById("primary").style.display = "none";
@@ -106,11 +107,6 @@
     document.getElementById("popupOBJETS").style.animation="popupOpen 0.2s"
   });
   
-    // document.getElementById('boutonOBJETS').addEventListener('mouseup',function () {
-    //   document.getElementById('popupOBJETS').style.display = "none";
-    //   document.getElementById("listeProjetPhoto").style.display = "flex";
-    // });
-
   //Rovesciato
   document.getElementById('ROVE').addEventListener('mouseup',function () {
     document.getElementById("popupROVE").style.display = "flex";
@@ -155,6 +151,13 @@
     document.getElementById("popupTF").style.display = "flex";
     document.getElementById('listePopPhoto').style.display = "flex";
     document.getElementById("popupTF").style.animation="popupOpen 0.2s"
+  });
+
+  //Semaine 1
+  document.getElementById('Sem1').addEventListener('mouseup',function () {
+    document.getElementById("popupSem1").style.display = "flex";
+    document.getElementById('listePopProjet').style.display = "flex";
+    document.getElementById("popupSem1").style.animation="popupOpen 0.2s"
   });
               
   document.getElementById("iViewer").addEventListener('mouseup', closelb);

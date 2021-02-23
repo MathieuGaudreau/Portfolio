@@ -74,6 +74,9 @@
     background: couleurRect(photoshop);
 }
 
+.popProjetRe{
+    background: couleurRect(projetRecherche);
+}
 
 #date{
     font-size:2em;
@@ -126,7 +129,7 @@
     font-size: 1em;
 }
 
-iframe{
+iframe, video{
     width: 100%;
     height: 50vh;
 }

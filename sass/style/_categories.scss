@@ -81,8 +81,8 @@
     @include ecranCategorie();
 }
 
-#ecranIllustrator{
-    background: couleurRect(illustrator);
+#ecranProjetRecherche{
+    background: couleurRect(projetRecherche);
     @include ecranCategorie();
 }
 
