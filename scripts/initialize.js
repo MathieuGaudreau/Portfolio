@@ -14,11 +14,11 @@
     document.getElementById("ecranWeb").style.animation="popupOpen 0.2s"
   });
 
-  document.getElementById("photoshop").addEventListener('mouseup',function () {
+  document.getElementById("creation").addEventListener('mouseup',function () {
     document.getElementById("primary").style.display = "none";
     document.getElementById("footer").style.display = "none";
-    document.getElementById("ecranPhotoshop").style.display = "flex";
-    document.getElementById("ecranPhotoshop").style.animation="popupOpen 0.2s"
+    document.getElementById("ecranCreation").style.display = "flex";
+    document.getElementById("ecranCreation").style.animation="popupOpen 0.2s"
   });
 
    document.getElementById("projetRecherche").addEventListener('mouseup',function () {
@@ -87,7 +87,7 @@
    //Veille annonce
   document.getElementById('MCDO').addEventListener('mouseup',function () {
     document.getElementById("popupMCDO").style.display = "flex";
-    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupMCDO").style.animation="popupOpen 0.2s"
   });
 
@@ -95,7 +95,7 @@
   //TUTO
   document.getElementById('TUTO').addEventListener('mouseup',function () {
     document.getElementById("popupTUTO").style.display = "flex";
-     document.getElementById('listePopPhoto').style.display = "flex";
+     document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupTUTO").style.animation="popupOpen 0.2s"
   });
   
@@ -103,14 +103,14 @@
   //Objets
   document.getElementById('OBJETS').addEventListener('mouseup',function () {
     document.getElementById("popupOBJETS").style.display = "flex";
-    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupOBJETS").style.animation="popupOpen 0.2s"
   });
   
   //Rovesciato
   document.getElementById('ROVE').addEventListener('mouseup',function () {
     document.getElementById("popupROVE").style.display = "flex";
-    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupROVE").style.animation="popupOpen 0.2s"
   });
       
@@ -134,7 +134,7 @@
   //Obelisque
     document.getElementById('OBE').addEventListener('mouseup',function () {
       document.getElementById("popupOBE").style.display = "flex";
-      document.getElementById('listePopPhoto').style.display = "flex";
+      document.getElementById('listePopCreation').style.display = "flex";
       document.getElementById("popupOBE").style.animation="popupOpen 0.2s"
   });
       
@@ -142,15 +142,22 @@
   //Sous-Marin
   document.getElementById('SM').addEventListener('mouseup',function () {
     document.getElementById("popupSM").style.display = "flex";
-    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupSM").style.animation="popupOpen 0.2s"
   });
 
   //Tempus Fugit
   document.getElementById('TF').addEventListener('mouseup',function () {
     document.getElementById("popupTF").style.display = "flex";
-    document.getElementById('listePopPhoto').style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
     document.getElementById("popupTF").style.animation="popupOpen 0.2s"
+  });
+
+  //Tempus Fugit
+  document.getElementById('TOKYO').addEventListener('mouseup',function () {
+    document.getElementById("popupTOKYO").style.display = "flex";
+    document.getElementById('listePopCreation').style.display = "flex";
+    document.getElementById("popupTOKYO").style.animation="popupOpen 0.2s"
   });
 
   //Semaine 1

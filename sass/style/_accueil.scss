@@ -103,7 +103,7 @@ h1{
     justify-self: center;
     width: fit-content;
     display: grid;
-    grid-template-areas: "photo jeux"
+    grid-template-areas: "creation jeux"
                          "design projRe" ;
     
     @include smallPC{
@@ -129,11 +129,11 @@ h1{
     margin-right: 1em;
 }
 
-#photoshop{
+#creation{
     width: 12em;
     height: 17em;
-    grid-area: photo;
-    background: couleurRect(photoshop);
+    grid-area: creation;
+    background: couleurRect(creation);
     @include categories();
     justify-self: right;
     margin-right: 1em;

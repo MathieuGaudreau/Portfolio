@@ -12,6 +12,12 @@
     @include phone{
      margin-bottom: 2em;
     }
+
+    .doc{
+      width: fit-content;
+      border-radius: 10px;
+      padding:0 1em 0 1em ;
+    }
   }
   
   .slides {
@@ -105,6 +111,7 @@
     }
 
   }
+
   .slider > a:active {
     top: 1px;
     background: $couleur-nom;
@@ -181,4 +188,26 @@
   align-self: center;
   width: 80%;
   font-style: italic;
+}
+
+.canva{
+  position: relative; 
+  width: 100%; 
+  height: 50vh; 
+  padding-top: 56.25%;
+	padding-bottom: 48px; 
+  box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+  overflow: hidden;
+	border-radius: 8px; will-change: transform;
+
+    iframe{
+      position: absolute; 
+      width: 100%; 
+      height: 100%; 
+      top: 0; 
+      left: 0; 
+      border: none; 
+      padding: 0;
+      margin: 0;
+    }
 }
