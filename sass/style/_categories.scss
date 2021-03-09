@@ -1,15 +1,21 @@
 @import "./variables";
 
+#categories{
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
 .ecranCategorie{
-    position: absolute;
-    top: 10%;
-    left: 13%;
-    width: 75%;
-    height: 47em;
+    width: 80%;
+    height: 85%;
     border-radius: 10px;
     justify-content: space-between;
     flex-flow: column;
-
+    transition: all 0.3s;
     @include smallPC{
         min-height : fit-content;
     }
@@ -88,6 +94,7 @@
 
 
 .projet{
+   margin-bottom: 4em;
     align-self: center;
     width: 20rem;
     height: 70%;
@@ -106,36 +113,16 @@
         transform: scale(0.65);
     }
 
+    @include ipad{
+        width: 18rem;
+        margin: 0;
+    }
+
     @include phone{
         height: 50%;
         width: 48%;
     }
    
-}
-
-.projetPetit{
-    width: 15rem;
-    height: 70%;
-
-    @include phone{
-        height: 40%;
-        width: 48%;
-    }
-}
-
-.projetPetitCreation{
-    width: 15rem;
-    height: 15rem;
-
-    @include smallPC{
-        transform: scale(0.65);
-        height: 70%;
-    }
-
-    @include phone{
-        height: 40%;
-        width: 48%;
-    }
 }
 
 .projet:hover{
@@ -156,35 +143,14 @@
     transition: 0.5s color linear;
 }
 
-
-@keyframes popupOpen {
-    0%{
-      transform: scale(0.0);
-    }
-
-    100%{
-      transform: scale(1);
-    }
-  }
-
-  @keyframes popupClose {
-    0%{
-      transform: scale(1);
-    }
-
-    100%{
-      transform: scale(0.0);
-    }
-  }
-
   .listeProjet{
+      margin: 2rem;
       display: flex;
       flex-flow: row;
       flex-wrap: wrap;
       height: 100%;
-      justify-content: space-evenly;
-      align-content: space-evenly;
-
+      overflow-y: scroll;
+        justify-content: space-evenly;
       @include smallPC{
           overflow-y: scroll;
           align-content: baseline;
@@ -209,20 +175,7 @@
     &::-webkit-scrollbar-track {
         background: transparent;
       }
-  }
 
-
-
-  #listeProjetCreation{
-      width: 80%;
-      margin: 0 auto;
-        display: flex;
-       
-    @include smallPC{
-        width: 98%;
-        margin: 0;
-        margin-right: 2%;
-    }
   }
 
   

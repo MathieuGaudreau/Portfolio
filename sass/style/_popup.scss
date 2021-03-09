@@ -7,6 +7,7 @@
 
     @include ipad{
         font-size: 2.5em;
+        margin: 2em 0 0 0;
        }
 }
 
@@ -15,24 +16,24 @@
     width: 100%;
     flex-flow: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.listePop{
+    height: 100%;
+    display: none;
 }
 
 .popup{
     display: none;
     @include ecranCategorie();
-    position: fixed;
-    top: 10%;
-    left: 13%;
-    width: 75%;
-    min-height: 47em;
+    height: 100%;
     z-index: 1000;
     flex-flow: row-reverse;
     overflow: hidden;
     @include ipad{
         flex-flow: column;
         overflow-y: scroll;
-        height: 80%;
 
         &::-webkit-scrollbar {
             width: 10px;
@@ -59,7 +60,6 @@
         top: 0;
         left: 0;
     }
-
 }
 
 .popJeux{
@@ -87,19 +87,41 @@
     font-family: $fontDesc;
     font-size: 1.5em;
     text-align: justify;
-    width: 75%;
-    margin: 0;
+    width: 85%;
+    margin: 2.5em 0 0 0;
+    padding-right: 0.5em;
     line-height: 1.5em;
+    max-height: 50%;
+    overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+    &::-webkit-scrollbar-thumb {
+        background: $couleur_fond;
+        border-radius: 10px;
+      }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+      }
     @include ipad{
         padding-top: 3em;
         padding-bottom: 2em;
+        max-height: 100%;
+        margin: 0;
       }
 }
 
 .boutonPop{
     margin-top: 0.5em;
-
+    position: fixed;
     @include ipad{
         align-self: flex-end;
     }
@@ -111,6 +133,8 @@
     font-size: 2em;
     text-decoration: none;
     transition: 0.2s color linear;
+    overflow: scroll;
+    overflow: hidden;
 }
 
 .lienProjet:hover{
@@ -139,6 +163,7 @@ iframe, video{
 }
 
 .liens{
+    margin-top: 1em;
     display: flex;
     width: 100%;
     justify-content: space-evenly;

@@ -11,28 +11,32 @@
     document.getElementById("primary").style.display = "none";
     document.getElementById("footer").style.display = "none";
     document.getElementById("ecranWeb").style.display = "flex";
-    document.getElementById("ecranWeb").style.animation="popupOpen 0.2s"
+    document.getElementById("ecranWeb").style.animation="catOpen 0.3s"
+    document.getElementById("categories").style.height = "100%";
   });
 
   document.getElementById("creation").addEventListener('mouseup',function () {
     document.getElementById("primary").style.display = "none";
     document.getElementById("footer").style.display = "none";
     document.getElementById("ecranCreation").style.display = "flex";
-    document.getElementById("ecranCreation").style.animation="popupOpen 0.2s"
+    document.getElementById("ecranCreation").style.animation="catOpen 0.3s"
+    document.getElementById("categories").style.height = "100%";
   });
 
    document.getElementById("projetRecherche").addEventListener('mouseup',function () {
      document.getElementById("primary").style.display = "none";
      document.getElementById("footer").style.display = "none";
      document.getElementById("ecranProjetRecherche").style.display = "flex";
-     document.getElementById("ecranProjetRecherche").style.animation="popupOpen 0.2s"
+     document.getElementById("ecranProjetRecherche").style.animation="catOpen 0.3s"
+     document.getElementById("categories").style.height = "100%";
    });
 
   document.getElementById("jeux").addEventListener('mouseup',function () {
     document.getElementById("primary").style.display = "none";
     document.getElementById("footer").style.display = "none";
     document.getElementById("ecranJeux").style.display = "flex";
-    document.getElementById("ecranJeux").style.animation="popupOpen 0.2s"
+    document.getElementById("ecranJeux").style.animation="catOpen 0.3s"
+    document.getElementById("categories").style.height = "100%";
   });
 
 
@@ -41,7 +45,8 @@
   document.getElementById('lastSpark').addEventListener('mouseup',function () {
     document.getElementById("popupLastSpark").style.display = "flex";
     document.getElementById('listePopJeux').style.display = "flex";
-    document.getElementById("popupLastSpark").style.animation="popupOpen 0.2s"
+    document.getElementById("popupLastSpark").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
 
@@ -49,7 +54,8 @@
   document.getElementById('TIM2020').addEventListener('mouseup',function () {
     document.getElementById("popupTIM2020").style.display = "flex";
     document.getElementById('listePopWeb').style.display = "flex";
-    document.getElementById("popupTIM2020").style.animation="popupOpen 0.2s"
+    document.getElementById("popupTIM2020").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
 
@@ -57,14 +63,16 @@
   document.getElementById('VFM').addEventListener('mouseup',function () {
     document.getElementById("popupVFM").style.display = "flex";
     document.getElementById('listePopWeb').style.display = "flex";
-    document.getElementById("popupVFM").style.animation="popupOpen 0.2s"
+    document.getElementById("popupVFM").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
   //site last spark
   document.getElementById('SLS').addEventListener('mouseup',function () {
     document.getElementById("popupSLS").style.display = "flex";
     document.getElementById('listePopWeb').style.display = "flex";
-    document.getElementById("popupSLS").style.animation="popupOpen 0.2s"
+    document.getElementById("popupSLS").style.animation="popOpen 0.3s";
+fermeListe();
   });
   
 
@@ -72,7 +80,8 @@
   document.getElementById('NIMH').addEventListener('mouseup',function () {
     document.getElementById("popupNIMH").style.display = "flex";
     document.getElementById('listePopJeux').style.display = "flex";
-    document.getElementById("popupNIMH").style.animation="popupOpen 0.2s"
+    document.getElementById("popupNIMH").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
 
@@ -80,7 +89,8 @@
   document.getElementById('ASSASINE').addEventListener('mouseup',function () {
     document.getElementById("popupASSASINE").style.display = "flex";
     document.getElementById('listePopJeux').style.display = "flex";
-    document.getElementById("popupASSASINE").style.animation="popupOpen 0.2s"
+    document.getElementById("popupASSASINE").style.animation="popOpen 0.3s";
+fermeListe();
   });
   
 
@@ -88,7 +98,8 @@
   document.getElementById('MCDO').addEventListener('mouseup',function () {
     document.getElementById("popupMCDO").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupMCDO").style.animation="popupOpen 0.2s"
+    document.getElementById("popupMCDO").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
 
@@ -96,7 +107,8 @@
   document.getElementById('TUTO').addEventListener('mouseup',function () {
     document.getElementById("popupTUTO").style.display = "flex";
      document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupTUTO").style.animation="popupOpen 0.2s"
+    document.getElementById("popupTUTO").style.animation="popOpen 0.3s";
+fermeListe();
   });
   
 
@@ -104,14 +116,16 @@
   document.getElementById('OBJETS').addEventListener('mouseup',function () {
     document.getElementById("popupOBJETS").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupOBJETS").style.animation="popupOpen 0.2s"
+    document.getElementById("popupOBJETS").style.animation="popOpen 0.3s";
+fermeListe();
   });
   
   //Rovesciato
   document.getElementById('ROVE').addEventListener('mouseup',function () {
     document.getElementById("popupROVE").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupROVE").style.animation="popupOpen 0.2s"
+    document.getElementById("popupROVE").style.animation="popOpen 0.3s";
+fermeListe();
   });
       
 
@@ -119,7 +133,8 @@
   document.getElementById('BLOOD').addEventListener('mouseup',function () {
     document.getElementById("popupBLOOD").style.display = "flex";
     document.getElementById('listePopJeux').style.display = "flex";
-    document.getElementById("popupBLOOD").style.animation="popupOpen 0.2s"
+    document.getElementById("popupBLOOD").style.animation="popOpen 0.3s";
+fermeListe();
   });
         
 
@@ -127,7 +142,8 @@
   document.getElementById('MANOR').addEventListener('mouseup',function () {
     document.getElementById("popupMANOR").style.display = "flex";
     document.getElementById('listePopJeux').style.display = "flex";
-    document.getElementById("popupMANOR").style.animation="popupOpen 0.2s"
+    document.getElementById("popupMANOR").style.animation="popOpen 0.3s";
+fermeListe();
   });
             
 
@@ -135,7 +151,8 @@
     document.getElementById('OBE').addEventListener('mouseup',function () {
       document.getElementById("popupOBE").style.display = "flex";
       document.getElementById('listePopCreation').style.display = "flex";
-      document.getElementById("popupOBE").style.animation="popupOpen 0.2s"
+      document.getElementById("popupOBE").style.animation="popOpen 0.3s";
+      fermeListe();
   });
       
 
@@ -143,28 +160,32 @@
   document.getElementById('SM').addEventListener('mouseup',function () {
     document.getElementById("popupSM").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupSM").style.animation="popupOpen 0.2s"
+    document.getElementById("popupSM").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
   //Tempus Fugit
   document.getElementById('TF').addEventListener('mouseup',function () {
     document.getElementById("popupTF").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupTF").style.animation="popupOpen 0.2s"
+    document.getElementById("popupTF").style.animation="popOpen 0.3s";
+fermeListe();
   });
 
-  //Tempus Fugit
+  //TTokyo
   document.getElementById('TOKYO').addEventListener('mouseup',function () {
     document.getElementById("popupTOKYO").style.display = "flex";
     document.getElementById('listePopCreation').style.display = "flex";
-    document.getElementById("popupTOKYO").style.animation="popupOpen 0.2s"
+    document.getElementById("popupTOKYO").style.animation="popOpen 0.3s";
+    fermeListe();
   });
 
   //Semaine 1
   document.getElementById('Sem1').addEventListener('mouseup',function () {
     document.getElementById("popupSem1").style.display = "flex";
     document.getElementById('listePopProjet').style.display = "flex";
-    document.getElementById("popupSem1").style.animation="popupOpen 0.2s"
+    document.getElementById("popupSem1").style.animation="popOpen 0.3s";
+fermeListe();
   });
               
   document.getElementById("iViewer").addEventListener('mouseup', closelb);
@@ -196,12 +217,13 @@ function fermePop()
 {
   for (let i = 0; i < popup.length; i++) 
   {
-    popup[i].style.animation="popupClose 0.3s"
+    popup[i].style.animation="popClose 0.3s";
     setTimeout(function() 
     {
       popup[i].style.display = "none";
     }, 300);
-  }              
+  } 
+  OuvreListe()             
 }  
 
 
@@ -219,7 +241,7 @@ function fermeCat()
 {
   for (let i = 0; i < ecranCategories.length; i++) 
   {
-    ecranCategories[i].style.animation="popupClose 0.3s ease-out"
+    ecranCategories[i].style.animation="catClose 0.3s";
     
     setTimeout(function() {
     ecranCategories[i].style.display = "none";
@@ -228,7 +250,7 @@ function fermeCat()
 
   }
   document.getElementById("primary").style.display = "flex";
-
+  document.getElementById("categories").style.height = "0%";
   if (screen.width > 1000) {
     document.getElementById("footer").style.display = "flex";
   }
@@ -237,5 +259,39 @@ function fermeCat()
 }  
 
 document.getElementById("boutonMobile").addEventListener("mouseup", openNav);
-  
+
+
+function fermeListe() {
+  let ecranCat = document.querySelectorAll(".ecranCat");
+  let listeProjet = document.querySelectorAll(".listeProjet");
+  let listePop = document.querySelectorAll(".listePop");
+  for (let i = 0; i < ecranCat.length; i++) {
+    ecranCat[i].style.display = "none";
+  }
+  for (let i = 0; i < listeProjet.length; i++) {
+    listeProjet[i].style.display = "none";
+  }
+
+  for (let i = 0; i < listePop.length; i++) {
+    listePop[i].style.display = "flex";
+  }
+}
+
+function OuvreListe() {
+  let ecranCat = document.querySelectorAll(".ecranCat");
+  let listeProjet = document.querySelectorAll(".listeProjet");
+  let listePop = document.querySelectorAll(".listePop");
+  for (let i = 0; i < ecranCat.length; i++) {
+    ecranCat[i].style.display = "flex";
+  }
+
+  for (let i = 0; i < listeProjet.length; i++) {
+    listeProjet[i].style.display = "flex";
+  }
+
+  for (let i = 0; i < listePop.length; i++) {
+    listePop[i].style.display = "none";
+  }
+}
+
 })();

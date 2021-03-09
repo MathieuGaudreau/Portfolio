@@ -4,6 +4,8 @@
 }
 
 .animGrand{
+	position: fixed;
+	width: 100%;
 	@include ipad{
 		display: none;
 	}
@@ -13,6 +15,8 @@
 	display: none;
 	@include ipad{
 		display: block;
+		position: fixed;
+		width: 100%;
 	}
 
 	@include phone{
@@ -22,6 +26,10 @@
 
 .animPhone{
 	display: none;
+	@include phone{
+		position: fixed;
+		width: 100%;
+	}
 }
 
 .animation{
@@ -31,10 +39,12 @@
 
 
 .svgGrand{
-	stroke:$couleur-anim;
+	fill:$couleur-anim;
+	stroke: none;
 	position:absolute;
 	bottom: -100vh;
 	transform-style: preserve-3d;
+	overflow: visible;
 }
 
 .svgIpad{
@@ -56,7 +66,7 @@ $total: 10;
 		animation: raise#{$i} 6 + random(15) +s linear infinite;
 		animation-delay:random(5) - 5 + s;
 		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-		z-index: $i - 20;
+		z-index: 0;
 		filter: blur($i - 6 + px);
 
 	  @keyframes raise#{$i} {
@@ -107,4 +117,53 @@ $total: 10;
 		}
 	}
 }
+
+@keyframes catOpen {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes catClose {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
+      100% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+  }
+
+  @keyframes popOpen {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes popClose {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    
+      100% {
+        opacity: 0;
+        transform: translateX(50%);
+      }
+  }
+
 

@@ -1,213 +1,214 @@
 .slider {
-    width: 100%;
-    text-align: center;
-    align-self: center;
-    margin-left: 2em;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  margin-left: 2em;
 
-    @include ipad{
-      padding-top: 3em;
-      margin: 0;
-    }
-
-    @include phone{
-     margin-bottom: 2em;
-    }
-
-    .doc{
-      width: fit-content;
-      border-radius: 10px;
-      padding:0 1em 0 1em ;
-    }
-  }
-  
-  .slides {
-    display: flex;
-    border-radius: 10px;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    align-items: center;
-    height: 100%;
-    border-radius: 10px;
-
-    @include ipad{
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    height: fit-content;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: $couleur_fond;
-      border-radius: 10px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-      }
-  }
-  
+  @include ipad{
+    padding-top: 3em;
+    margin: 0;
   }
 
-  .slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    margin-right: 50px;
-    border-radius: 10px;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    font-size: 100px;
-
-    @include ipad{
-      margin: 0;
-      height: fit-content;
-    }
+  @include phone{
+   margin-bottom: 2em;
   }
 
-  .slides > div > img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    max-height: 60vh;
-    border-radius: 10px;
-    &:hover{
-      cursor: pointer;
-    }
-
-    @include ipad{
-      height: fit-content;
-    }
-    
+  .doc{
+    width: fit-content;
+    border-radius: 10em;
+    padding:0 1em 0 1em ;
   }
-  
-  .slider > a {
-    display: inline-flex;
-    width: 2rem;
-    height: 2rem;
-    background: $couleur_fond;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 0 2rem 0;
-    position: relative;
-    color: $couleur-nom;
-    font-family: $font;
-    transition: .5s ease;
-
-    @include ipad{
-      width: 1.5em;
-      height: 1.5em;
-      font-size: 2em;
-    }
-
-  }
-
-  .slider > a:active {
-    top: 1px;
-    background: $couleur-nom;
-  }
-  .slider > a:focus {
-    background: white;
-  }
-
-  .slider > a:hover{
-    background: $couleur_nom;
-    color: $couleur_fond;
-  }
-
-  .container {
-    position: relative;
-    width: 100%;
-    cursor: pointer;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    opacity: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-
-    @include ipad{
-      display: none;
-    }
-  }
-
-  .container:hover .overlay {
-    height: 45%;
-    opacity: 1;
-  }
-
-  .txtHoverTitre{
-      font-family: $font;
-      color: $couleur_nom;
-      font-size: 0.3em;
-      text-align: center;
-      align-self: center;
-      letter-spacing: 0.3em;
-  }
-
-  .txtHoverDesc{
-    margin-top: 1em;
-    font-family: $fontDesc;
-    color: $couleur_nom;
-    font-size: 0.2em;
-    text-align: center;
-    align-self: center;
-    width: 80%;
 }
 
-.fullscreen{
+.slides {
+  display: flex;
+  border-radius: 10px;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  height: 100%;
+  border-radius: 10px;
+
+  @include ipad{
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: fit-content;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $couleur_fond;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    }
+}
+
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+
+  @include ipad{
+    margin: 0;
+    height: fit-content;
+  }
+}
+
+.slides > div > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-height: 60vh;
+  border-radius: 10px;
+  &:hover{
+    cursor: pointer;
+  }
+
+  @include ipad{
+    height: fit-content;
+  }
+  
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  background: $couleur_fond;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 2rem 0;
+  position: relative;
+  color: $couleur-nom;
+  font-family: $font;
+  transition: .5s ease;
+
+  @include ipad{
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 1.5em;
+    margin: 0 0 0.5em 0 ;
+  }
+
+}
+
+.slider > a:active {
+  top: 1px;
+  background: $couleur-nom;
+}
+.slider > a:focus {
+  background: white;
+}
+
+.slider > a:hover{
+  background: $couleur_nom;
+  color: $couleur_fond;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  object-fit: contain;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  opacity: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @include ipad{
+    display: none;
+  }
+}
+
+.container:hover .overlay {
+  height: 45%;
+  opacity: 1;
+}
+
+.txtHoverTitre{
+    font-family: $font;
+    color: $couleur_nom;
+    font-size: 0.3em;
+    text-align: center;
+    align-self: center;
+    letter-spacing: 0.3em;
+}
+
+.txtHoverDesc{
   margin-top: 1em;
   font-family: $fontDesc;
-  color: couleurRect(jeux);
-  font-size: 0.15em;
+  color: $couleur_nom;
+  font-size: 0.2em;
   text-align: center;
   align-self: center;
   width: 80%;
-  font-style: italic;
+}
+
+.fullscreen{
+margin-top: 1em;
+font-family: $fontDesc;
+color: couleurRect(jeux);
+font-size: 0.15em;
+text-align: center;
+align-self: center;
+width: 80%;
+font-style: italic;
 }
 
 .canva{
-  position: relative; 
-  width: 100%; 
-  height: 50vh; 
-  padding-top: 56.25%;
-	padding-bottom: 48px; 
-  box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
-  overflow: hidden;
-	border-radius: 8px; will-change: transform;
+position: relative; 
+width: 100%; 
+height: 50vh; 
+padding-top: 56.25%;
+padding-bottom: 48px; 
+box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+overflow: hidden;
+border-radius: 8px; will-change: transform;
 
-    iframe{
-      position: absolute; 
-      width: 100%; 
-      height: 100%; 
-      top: 0; 
-      left: 0; 
-      border: none; 
-      padding: 0;
-      margin: 0;
-    }
+  iframe{
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    border: none; 
+    padding: 0;
+    margin: 0;
+  }
 }
