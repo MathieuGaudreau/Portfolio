@@ -27,6 +27,7 @@
 .animPhone{
 	display: none;
 	@include phone{
+		display: block;
 		position: fixed;
 		width: 100%;
 	}
@@ -48,10 +49,21 @@
 }
 
 .svgIpad{
+	fill: none;
 	stroke:$couleur-anim;
 	position:absolute;
 	bottom: -100vh;
 	transform-style: preserve-3d;
+	overflow: visible;
+}
+
+.svgPhone{
+	fill: none;
+	stroke:$couleur-anim;
+	position:absolute;
+	bottom: -100vh;
+	transform-style: preserve-3d;
+	overflow: visible;
 }
 
 $total: 10;
