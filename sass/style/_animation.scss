@@ -39,8 +39,8 @@
 
 
 .svgGrand{
-	fill:$couleur-anim;
-	stroke: none;
+	fill: none;
+	stroke:$couleur-anim;
 	position:absolute;
 	bottom: -100vh;
 	transform-style: preserve-3d;
