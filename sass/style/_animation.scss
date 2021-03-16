@@ -1,181 +1,163 @@
-
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-.animGrand{
-	position: fixed;
-	width: 100%;
-	@include ipad{
-		display: none;
-	}
+.animGrand {
+    position: fixed;
+    width: 100%;
+    @include ipad {
+        display: none;
+    }
 }
 
-.animIpad{
-	display: none;
-	@include ipad{
-		display: block;
-		position: fixed;
-		width: 100%;
-	}
-
-	@include phone{
-		display: none;
-	}
+.animIpad {
+    display: none;
+    @include ipad {
+        display: block;
+        position: fixed;
+        width: 100%;
+    }
+    @include phone {
+        display: none;
+    }
 }
 
-.animPhone{
-	display: none;
-	@include phone{
-		display: block;
-		position: fixed;
-		width: 100%;
-	}
+.animPhone {
+    display: none;
+    @include phone {
+        display: block;
+        position: fixed;
+        width: 100%;
+    }
 }
 
-.animation{
+.animation {
     z-index: 1;
     perspective-origin: 50% 50%;
 }
 
-
-.svgGrand{
-	fill: none;
-	stroke:$couleur-anim;
-	position:absolute;
-	bottom: -100vh;
-	transform-style: preserve-3d;
-	overflow: visible;
+.svgGrand {
+    fill: none;
+    stroke: $couleur-anim;
+    position: absolute;
+    bottom: -100vh;
+    transform-style: preserve-3d;
+    overflow: visible;
 }
 
-.svgIpad{
-	fill: none;
-	stroke:$couleur-anim;
-	position:absolute;
-	bottom: -100vh;
-	transform-style: preserve-3d;
-	overflow: visible;
+.svgIpad {
+    fill: none;
+    stroke: $couleur-anim;
+    position: absolute;
+    bottom: -100vh;
+    transform-style: preserve-3d;
+    overflow: visible;
 }
 
-.svgPhone{
-	fill: none;
-	stroke:$couleur-anim;
-	position:absolute;
-	bottom: -100vh;
-	transform-style: preserve-3d;
-	overflow: visible;
+.svgPhone {
+    fill: none;
+    stroke: $couleur-anim;
+    position: absolute;
+    bottom: -100vh;
+    transform-style: preserve-3d;
+    overflow: visible;
 }
 
 $total: 10;
-
-
-
 @for $i from 1 through $total {
-	$scale:random(2) - .4;
-	
-	.svgGrand:nth-child(#{$i}){
-		left:random(120) * 1% - 20;		
-		animation: raise#{$i} 6 + random(15) +s linear infinite;
-		animation-delay:random(5) - 5 + s;
-		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-		z-index: 0;
-		filter: blur($i - 6 + px);
-
-	  @keyframes raise#{$i} {
-		  to{
-			 bottom:150vh;
-			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-			}
-		}
-	}
+    $scale: random(2) - 0.4;
+    .svgGrand:nth-child(#{$i}) {
+        left: random(120) * 1% - 20;
+        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation-delay: random(5) - 5 + s;
+        transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+        z-index: 0;
+        filter: blur($i - 6 + px);
+        @keyframes raise#{$i} {
+            to {
+                bottom: 150vh;
+                transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+            }
+        }
+    }
 }
 
 @for $i from 1 through $total {
-	$scale:random(2) - .4;
-	
-	.svgIpad:nth-child(#{$i}){
-		left:random(120) * 1% - 60;		
-		animation: raise#{$i} 6 + random(15) +s linear infinite;
-		animation-delay:random(5) - 5 + s;
-		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-		z-index: $i - 20;
-		filter: blur($i - 6 + px);
-
-	  @keyframes raise#{$i} {
-		  to{
-			 bottom:150vh;
-			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-			}
-		}
-	}
+    $scale: random(2) - 0.4;
+    .svgIpad:nth-child(#{$i}) {
+        left: random(120) * 1% - 60;
+        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation-delay: random(5) - 5 + s;
+        transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+        z-index: $i - 20;
+        filter: blur($i - 6 + px);
+        @keyframes raise#{$i} {
+            to {
+                bottom: 150vh;
+                transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+            }
+        }
+    }
 }
 
 @for $i from 1 through $total {
-	$scale:random(2) - .4;
-	
-	.svgPhone:nth-child(#{$i}){
-		left:random(1) * 20% - 1;		
-		animation: raise#{$i} 6 + random(15) +s linear infinite;
-		animation-delay:random(5) - 5 + s;
-		transform: scale(.1 * $i - .3) rotate(random(360) + deg);
-		z-index: $i - 20;
-		filter: blur($i - 6 + px);
-
-	  @keyframes raise#{$i} {
-		  to{
-			 bottom:150vh;
-			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-			}
-		}
-	}
+    $scale: random(2) - 0.4;
+    .svgPhone:nth-child(#{$i}) {
+        left: random(1) * 20% - 1;
+        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation-delay: random(5) - 5 + s;
+        transform: scale(0.1 * $i - 0.3) rotate(random(360) + deg);
+        z-index: $i - 20;
+        filter: blur($i - 6 + px);
+        @keyframes raise#{$i} {
+            to {
+                bottom: 150vh;
+                transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+            }
+        }
+    }
 }
 
 @keyframes catOpen {
     0% {
         opacity: 0;
         transform: translateY(-50%);
-      }
-    
-      100% {
+    }
+    100% {
         opacity: 1;
         transform: translateY(0);
-      }
-  }
+    }
+}
 
-  @keyframes catClose {
+@keyframes catClose {
     0% {
         opacity: 1;
         transform: translateY(0);
-      }
-    
-      100% {
+    }
+    100% {
         opacity: 0;
         transform: translateY(100%);
-      }
-  }
+    }
+}
 
-  @keyframes popOpen {
+@keyframes popOpen {
     0% {
         opacity: 0;
         transform: translateY(50%);
-      }
-    
-      100% {
+    }
+    100% {
         opacity: 1;
         transform: translateY(0);
-      }
-  }
+    }
+}
 
-  @keyframes popClose {
+@keyframes popClose {
     0% {
         opacity: 1;
         transform: translateX(0);
-      }
-    
-      100% {
+    }
+    100% {
         opacity: 0;
         transform: translateX(50%);
-      }
-  }
-
-
+    }
+}

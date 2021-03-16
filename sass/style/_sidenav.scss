@@ -1,21 +1,31 @@
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
     right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -24,33 +34,33 @@
     transition: 0.3s;
     margin: 1.5em;
     padding: 0;
-  }
+}
 
-  .logo{
-      font-size: 3em;
-
-      @include phone{
+.logo {
+    font-size: 3em;
+    @include phone {
         font-size: 2em;
-      }
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
+    }
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
     color: #f1f1f1;
-  }
-  
+}
 
-  .closebtn{
-      align-self: flex-end;
-      justify-content: flex-start;
-      margin-right: 0;
-  }
+.closebtn {
+    align-self: flex-end;
+    justify-content: flex-start;
+    margin-right: 0;
+}
 
-  .x{
-      font-size: 2em;
-  }
- 
-  .txtNav{
+.x {
+    font-size: 2em;
+}
+
+.txtNav {
     color: $couleur-nom;
     font-family: $font;
     font-weight: weight(extraLight);
@@ -58,4 +68,4 @@
     margin-bottom: 0;
     justify-self: self-end;
     text-align: center;
-  }
+}

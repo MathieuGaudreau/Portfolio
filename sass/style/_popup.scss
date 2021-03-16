@@ -1,17 +1,16 @@
-.nomProjetPop{
+.nomProjetPop {
     @include nomProjet();
     align-self: flex-start;
     font-size: 3em;
     margin: 0;
     letter-spacing: 0.15em;
-
-    @include ipad{
+    @include ipad {
         font-size: 2.5em;
         margin: 2em 0 0 0;
-       }
+    }
 }
 
-.descriptionProjet{
+.descriptionProjet {
     display: flex;
     width: 100%;
     flex-flow: column;
@@ -19,42 +18,38 @@
     justify-content: center;
 }
 
-.listePop{
+.listePop {
     height: 100%;
     display: none;
 }
 
-.popup{
+.popup {
     display: none;
     @include ecranCategorie();
     height: 100%;
     z-index: 1000;
     flex-flow: row-reverse;
     overflow: hidden;
-    @include ipad{
+    @include ipad {
         flex-flow: column;
         overflow-y: scroll;
-
         &::-webkit-scrollbar {
             width: 10px;
             height: 10px;
-          }
-    
+        }
         &::-webkit-scrollbar {
             width: 10px;
             height: 10px;
-          }
-    
+        }
         &::-webkit-scrollbar-thumb {
             background: $couleur_fond;
             border-radius: 10px;
-          }
+        }
         &::-webkit-scrollbar-track {
             background: transparent;
-          }
+        }
     }
-
-    @include phone{
+    @include phone {
         width: 100%;
         height: 100%;
         top: 0;
@@ -62,28 +57,28 @@
     }
 }
 
-.popJeux{
+.popJeux {
     background: couleurRect(jeux);
 }
 
-.popWeb{
+.popWeb {
     background: couleurRect(design);
 }
 
-.popCreation{
+.popCreation {
     background: couleurRect(creation);
 }
 
-.popProjetRe{
+.popProjetRe {
     background: couleurRect(projetRecherche);
 }
 
-#date{
-    font-size:2em;
+#date {
+    font-size: 2em;
     margin: 0;
 }
 
-.txtDescription{
+.txtDescription {
     font-family: $fontDesc;
     font-size: 1.5em;
     text-align: justify;
@@ -93,41 +88,38 @@
     line-height: 1.5em;
     max-height: 50%;
     overflow-y: scroll;
-
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-      }
-
+    }
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-      }
-
+    }
     &::-webkit-scrollbar-thumb {
         background: $couleur_fond;
         border-radius: 10px;
-      }
+    }
     &::-webkit-scrollbar-track {
         background: transparent;
-      }
-    @include ipad{
+    }
+    @include ipad {
         padding-top: 3em;
         padding-bottom: 2em;
         max-height: 100%;
         margin: 0;
-      }
+    }
 }
 
-.boutonPop{
+.boutonPop {
     margin-top: 0.5em;
     position: fixed;
-    @include ipad{
+    @include ipad {
         align-self: flex-end;
     }
 }
 
-.lienProjet{
+.lienProjet {
     font-family: $font;
     color: $couleur-nom;
     font-size: 2em;
@@ -137,35 +129,35 @@
     overflow: hidden;
 }
 
-.lienProjet:hover{
+.lienProjet:hover {
     color: $couleur_fond;
 }
 
-.lienProjet:hover i{
+.lienProjet:hover i {
     transition: 0.2s color linear;
 }
 
-.lienProjet:hover > i {
+.lienProjet:hover>i {
     color: $couleur_fond;
 }
 
-.lienProjet i{
+.lienProjet i {
     font-size: 1em;
 }
 
-iframe, video{
+iframe,
+video {
     width: 100%;
     height: 50vh;
 }
 
-.blanc{
+.blanc {
     color: $couleur-nom;
 }
 
-.liens{
+.liens {
     margin-top: 1em;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
-

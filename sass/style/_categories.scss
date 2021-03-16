@@ -1,6 +1,5 @@
 @import "./variables";
-
-#categories{
+#categories {
     height: 0%;
     display: flex;
     align-items: center;
@@ -9,51 +8,45 @@
     z-index: 100;
 }
 
-.ecranCategorie{
+.ecranCategorie {
     width: 80%;
     height: 85%;
     border-radius: 10px;
     justify-content: space-between;
     flex-flow: column;
     transition: all 0.3s;
-    @include smallPC{
-        min-height : fit-content;
+    @include smallPC {
+        min-height: fit-content;
     }
-
-    @include ipad{
+    @include ipad {
         height: 80%;
     }
-
-    @include phone{
+    @include phone {
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
     }
-
 }
 
-.ecranCategorie i{
+.ecranCategorie i {
     height: fit-content;
     margin-right: 0.5em;
     font-size: 3rem;
     color: $couleur_nom;
     transition: 0.2s color linear;
-
 }
 
-.ecranCategorie i:hover{
+.ecranCategorie i:hover {
     color: $couleur_fond;
     cursor: pointer;
-
 }
 
-
-.ecranCategorie i:active{
+.ecranCategorie i:active {
     color: $couleur-nom;
 }
 
-.ecranCat{
+.ecranCat {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,40 +54,38 @@
     margin-top: 1em;
 }
 
-.nomCat{
+.nomCat {
     margin-top: 0;
     font-size: 3rem;
     margin-left: 0.5em;
     height: fit-content;
-
-    @include smallPC{
+    @include smallPC {
         font-size: 2em;
     }
 }
 
-#ecranWeb{
+#ecranWeb {
     background: couleurRect(design);
     @include ecranCategorie();
 }
 
-#ecranJeux{
+#ecranJeux {
     background: couleurRect(jeux);
     @include ecranCategorie();
 }
 
-#ecranCreation{
+#ecranCreation {
     background: couleurRect(creation);
     @include ecranCategorie();
 }
 
-#ecranProjetRecherche{
+#ecranProjetRecherche {
     background: couleurRect(projetRecherche);
     @include ecranCategorie();
 }
 
-
-.projet{
-   margin-bottom: 4em;
+.projet {
+    margin-bottom: 4em;
     align-self: center;
     width: 20rem;
     height: 70%;
@@ -105,36 +96,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.5s filter linear;
-    box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
-    -moz-box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
-    box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.52);
-
-    @include smallPC{
+    box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);
+    box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);
+    @include smallPC {
         transform: scale(0.65);
     }
-
-    @include ipad{
+    @include ipad {
         width: 18rem;
         margin: 0;
     }
-
-    @include phone{
+    @include phone {
         height: 50%;
         width: 48%;
     }
-   
 }
 
-.projet:hover{
+.projet:hover {
     cursor: pointer;
     filter: grayscale(100%);
 }
 
-.projet:hover > .nomProjet{
+.projet:hover>.nomProjet {
     color: $couleur_fond;
 }
 
-.nomProjet{
+.nomProjet {
     @include nomProjet();
     letter-spacing: 0.1em;
     text-align: center;
@@ -143,41 +130,33 @@
     transition: 0.5s color linear;
 }
 
-  .listeProjet{
-      margin: 2rem;
-      display: flex;
-      flex-flow: row;
-      flex-wrap: wrap;
-      height: 100%;
-      overflow-y: scroll;
-        justify-content: space-evenly;
-      @include smallPC{
-          overflow-y: scroll;
-          align-content: baseline;
-          height: 80%;
-          margin-right: 2%;
-      }
-
+.listeProjet {
+    margin: 2rem;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow-y: scroll;
+    justify-content: space-evenly;
+    @include smallPC {
+        overflow-y: scroll;
+        align-content: baseline;
+        height: 80%;
+        margin-right: 2%;
+    }
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-      }
-
+    }
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-      }
-
+    }
     &::-webkit-scrollbar-thumb {
         background: $couleur_fond;
         border-radius: 10px;
-      }
+    }
     &::-webkit-scrollbar-track {
         background: transparent;
-      }
-
-  }
-
-  
-
-  
+    }
+}
