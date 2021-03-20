@@ -100,11 +100,11 @@
     -moz-box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);
     box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);
     @include smallPC {
-        transform: scale(0.65);
+        transform: scale(0.80);
     }
     @include ipad {
         width: 18rem;
-        margin: 0;
+        margin: 1em 0 1em 0;
     }
     @include phone {
         height: 50%;
