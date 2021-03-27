@@ -2,225 +2,180 @@
 html {
     height: 100%;
     overflow: hidden;
-}
 
-body {
-    height: 100%;
-    background: $couleur_fond;
-    overflow: hidden;
-}
+    body {
+        height: 100%;
+        background: $couleur_fond;
+        overflow: hidden;
 
-#boutonMobile {
-    align-self: flex-end;
-    display: none;
-    transition: transform 0.3s linear;
-    margin-right: 0.2em;
-    @include ipad {
-        display: block;
+        h1 {
+            font: 100% $font;
+            color: $couleur_nom;
+            font-weight: weight(regular);
+            font-size: 8em;
+            width: fit-content;
+            word-wrap: break-word;
+            text-transform: uppercase;
+            margin: 0;
+            width: fit-content;
+            @include smallPC {
+                font-size: 5em;
+            }
+            transition: 0.2s transform linear;
+        }
+
+        #primary {
+            align-self: center;
+            justify-self: center;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10%;
+            transition: display 0.2s linear;
+            position: relative;
+            z-index: 100;
+            @include ipad {
+                flex-flow: column;
+                align-items: center;
+            }
+            @include phone {
+                margin: 0;
+                transform: scale(0.9);
+            }
+            @include vertical {
+                flex-flow: column;
+                align-items: center;
+            }
+
+            #nom {
+                display: flex;
+                width: min-content;
+                flex-flow: column;
+                justify-content: center;
+                @include ipad {
+                    text-align: center;
+                }
+                @include phone {
+                    font-size: 0.8em;
+                    margin-top: 3em;
+                }
+
+                #presentation {
+                    color: $couleur-nom;
+                    font-family: $fontDesc;
+                }
+            }
+
+            #boutonMobile {
+                align-self: flex-end;
+                display: none;
+                transition: transform 0.3s linear;
+                margin-right: 0.2em;
+                color: #ffa82d;
+                @include ipad {
+                    display: block;
+                    font-size: 5em;
+                }
+                @include phone {
+                    font-size: 3em;
+                }
+                &:hover {
+                    transform: rotate(-20deg);
+                    cursor: pointer;
+                }
+            }
+
+            #rectangles {
+                justify-self: center;
+                width: fit-content;
+                display: grid;
+                grid-template-areas: "creation jeux" "design projRe";
+                @include smallPC {
+                    transform: scale(0.8);
+                }
+                @include phone {
+                    transform: scale(0.6) translateY(-5em);
+                    margin-bottom: 2em;
+                }
+                transition: 0.2s transform linear;
+
+                #web {
+                    margin-top: 2em;
+                    width: 17em;
+                    height: 12em;
+                    grid-area: design;
+                    background: couleurRect(design);
+                    @include categories();
+                    margin-right: 1em;
+                    animation: 0.3s animWeb ease;
+                }
+
+                #creation {
+                    width: 12em;
+                    height: 17em;
+                    grid-area: creation;
+                    background: couleurRect(creation);
+                    @include categories();
+                    justify-self: right;
+                    margin-right: 1em;
+                    animation: 0.3s animCreation ease;
+                }
+
+                #jeux {
+                    width: 17em;
+                    height: 12em;
+                    grid-area: jeux;
+                    background: couleurRect(jeux);
+                    @include categories();
+                    margin-left: 1em;
+                    animation: 0.3s animJeux ease;
+                }
+
+                #projetRecherche {
+                    width: 12em;
+                    height: 17em;
+                    grid-area: projRe;
+                    background: couleurRect(projetRecherche);
+                    @include categories();
+                    margin-left: 1em;
+                    position: relative;
+                    bottom: 3em;
+                    animation: 0.3s animProjet ease;
+                }
+            }
+        }
     }
-    @include phone {
-        font-size: 3em;
-    }
-    &:hover {
-        transform: rotate(-20deg);
-        cursor: pointer;
-    }
-}
 
-#nom {
-    display: flex;
-    width: min-content;
-    flex-flow: column;
-    justify-content: center;
-    @include ipad {
-        text-align: center;
-    }
-    @include phone {
-        font-size: 0.8em;
-        margin-top: 3em;
-    }
-}
-
-#icons {
-    width: 7%;
-    display: flex;
-    font-size: 0.5em;
-    justify-content: space-evenly;
-}
-
-#icons a {
-    margin: 0;
-}
-
-#cv {
-    font-family: $font;
-    text-decoration: none;
-    @include icons();
-}
-
-.icon {
-    @include icons();
-}
-
-h1 {
-    font: 100% $font;
-    color: $couleur_nom;
-    font-weight: weight(regular);
-    font-size: 8em;
-    width: fit-content;
-    word-wrap: break-word;
-    text-transform: uppercase;
-    margin: 0;
-    width: fit-content;
-    @include smallPC {
-        font-size: 5em;
-    }
-    transition: 0.2s transform linear;
-}
-
-#primary {
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10%;
-    transition: display 0.2s linear;
-    position: relative;
-    z-index: 100;
-    @include ipad {
+    footer {
+        position: relative;
+        z-index: 1000;
+        display: flex;
         flex-flow: column;
         align-items: center;
-    }
-    @include phone {
-        margin-top: 2;
-    }
-    @include vertical {
-        flex-flow: column;
-        align-items: center;
-    }
-}
+        margin-top: 5em;
+        @include ipad {
+            display: none;
+        }
 
-#rectangles {
-    justify-self: center;
-    width: fit-content;
-    display: grid;
-    grid-template-areas: "creation jeux" "design projRe";
-    @include smallPC {
-        transform: scale(0.8);
+        h4 {
+            color: $couleur-nom;
+            font-family: $font;
+            font-weight: weight(extraLight);
+            margin-top: 0.7em;
+            margin-bottom: 0;
+        }
+
+        #icons {
+            width: 7%;
+            display: flex;
+            font-size: 0.5em;
+            justify-content: space-evenly;
+
+            a {
+                margin: 0;
+            }
+            .icon {
+                @include icons();
+            }
+        }
     }
-    @include phone {
-        transform: scale(0.6) translateY(-5em);
-        margin-bottom: 2em;
-    }
-    transition: 0.2s transform linear;
-}
-
-#web {
-    margin-top: 2em;
-    width: 17em;
-    height: 12em;
-    grid-area: design;
-    background: couleurRect(design);
-    @include categories();
-    margin-right: 1em;
-    animation: 0.3s animWeb ease;
-}
-
-@keyframes animWeb {
-    0% {
-        transform: translateX(-400%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-#creation {
-    width: 12em;
-    height: 17em;
-    grid-area: creation;
-    background: couleurRect(creation);
-    @include categories();
-    justify-self: right;
-    margin-right: 1em;
-    animation: 0.3s animCreation ease;
-}
-
-@keyframes animCreation {
-    0% {
-        transform: translateY(-400%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-#jeux {
-    width: 17em;
-    height: 12em;
-    grid-area: jeux;
-    background: couleurRect(jeux);
-    @include categories();
-    margin-left: 1em;
-    animation: 0.3s animJeux ease;
-}
-
-@keyframes animJeux {
-    0% {
-        transform: translateX(400%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-#projetRecherche {
-    width: 12em;
-    height: 17em;
-    grid-area: projRe;
-    background: couleurRect(projetRecherche);
-    @include categories();
-    margin-left: 1em;
-    position: relative;
-    bottom: 3em;
-    animation: 0.3s animProjet ease;
-}
-
-@keyframes animProjet {
-    0% {
-        transform: translateY(400%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-#presentation {
-    color: $couleur-nom;
-    font-family: $fontDesc;
-}
-
-footer {
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 5em;
-    @include ipad {
-        display: none;
-    }
-}
-
-footer h4 {
-    color: $couleur-nom;
-    font-family: $font;
-    font-weight: weight(extraLight);
-    margin-top: 0.7em;
-    margin-bottom: 0;
-}
-
-header {
-    display: flex;
-    flex-flow: row;
 }

@@ -1,71 +1,53 @@
 .sidenav {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1000;
-    /* Stay on top */
     top: 0;
-    /* Stay at the top */
     right: 0;
     background-color: #111;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
-}
 
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffa82d;
+        display: block;
+        transition: 0.3s;
+        margin: 1.5em;
+        padding: 0;
 
-/* The navigation menu links */
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    margin: 1.5em;
-    padding: 0;
-}
-
-.logo {
-    font-size: 3em;
-    @include phone {
-        font-size: 2em;
+        .logo {
+            font-size: 3em;
+            @include phone {
+                font-size: 2em;
+            }
+        }
     }
-}
 
+    .closebtn {
+        align-self: flex-end;
+        justify-content: flex-start;
+        margin-right: 1em;
 
-/* When you mouse over the navigation links, change their color */
+        .x {
+            font-size: 2em;
+        }
+    }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.closebtn {
-    align-self: flex-end;
-    justify-content: flex-start;
-    margin-right: 0;
-}
-
-.x {
-    font-size: 2em;
-}
-
-.txtNav {
-    color: $couleur-nom;
-    font-family: $font;
-    font-weight: weight(extraLight);
-    margin-top: 0.7em;
-    margin-bottom: 0;
-    justify-self: self-end;
-    text-align: center;
+    .txtNav {
+        color: $couleur-nom;
+        font-family: $font;
+        font-weight: weight(extraLight);
+        margin-top: 0.7em;
+        margin-bottom: 0;
+        justify-self: self-end;
+        text-align: center;
+    }
 }

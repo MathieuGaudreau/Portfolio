@@ -1,17 +1,26 @@
 $couleur_fond: #1b1e47;
 $couleur-anim: #8fa59f;
-$font: "Righteous",
-cursive;
-$fontDesc: "Nunito",
-sans-serif;
-$font-weights: ( "extraLight": 150, "light": 250, "regular": 400, "medium": 500, "bold": 700, );
+$font: "Righteous", cursive;
+$fontDesc: "Nunito", sans-serif;
+$font-weights: (
+    "extraLight": 150,
+    "light": 250,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
 $widthAnimNorm: 20;
 $widthAnimIpad: 40;
 $couleur_nom: white;
 $smallPC: 1300px;
 $ipad: 1000px;
 $phone: 600px;
-$couleurs-rect: ( "design": #fe6560, "creation": #005b96, "projetRecherche": #4b86b4, "jeux": #ffa82d, );
+$couleurs-rect: (
+    "design": #fe6560,
+    "creation": #005b96,
+    "projetRecherche": #4b86b4,
+    "jeux": #ffa82d,
+);
 @mixin categories {
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.52);

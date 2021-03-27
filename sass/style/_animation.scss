@@ -68,7 +68,7 @@ $total: 10;
     $scale: random(2) - 0.4;
     .svgGrand:nth-child(#{$i}) {
         left: random(120) * 1% - 20;
-        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation: raise#{$i} 6 + random(15) + s linear infinite;
         animation-delay: random(5) - 5 + s;
         transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
         z-index: 0;
@@ -86,7 +86,7 @@ $total: 10;
     $scale: random(2) - 0.4;
     .svgIpad:nth-child(#{$i}) {
         left: random(120) * 1% - 60;
-        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation: raise#{$i} 6 + random(15) + s linear infinite;
         animation-delay: random(5) - 5 + s;
         transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
         z-index: $i - 20;
@@ -104,7 +104,7 @@ $total: 10;
     $scale: random(2) - 0.4;
     .svgPhone:nth-child(#{$i}) {
         left: random(1) * 20% - 1;
-        animation: raise#{$i} 6+random(15)+s linear infinite;
+        animation: raise#{$i} 6 + random(15) + s linear infinite;
         animation-delay: random(5) - 5 + s;
         transform: scale(0.1 * $i - 0.3) rotate(random(360) + deg);
         z-index: $i - 20;
@@ -159,5 +159,83 @@ $total: 10;
     100% {
         opacity: 0;
         transform: translateX(50%);
+    }
+}
+
+@keyframes animWeb {
+    0% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animCreation {
+    0% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes animJeux {
+    0% {
+        transform: translateX(400%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes animProjet {
+    0% {
+        transform: translateY(400%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes lightboxOuvre {
+    from {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes lightboxFerme {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.95);
+        opacity: 0;
+        filter: blur(0);
+    }
+}
+
+@keyframes fondOuvre {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fondFerme {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
